@@ -1,0 +1,26 @@
+ALGORITHM ALGO
+VAR
+    vowels: INTEGER := 0;
+    words: INTEGER:=0;
+    arr : ARRAY_OF STRING [100];
+    i : INTEGER:=0;
+    Char : INTEGER:=0;
+    
+
+BEGIN
+    Read (arr[i])
+    WHILE (arr[i]<> ".") DO
+        IF (arr[i]:=[a..z]or[A..Z]) THEN
+            Char:= Char+1;
+            IF (arr[i]:="a" or "e" or "i" or "o" or "u" or "A" or "E" or "I" or "O" or "U") THEN
+                vowels:=vowels+1;
+                Write(vowels)
+            END_IF
+        ELSE_IF (arr[i]:= " ") THEN
+            words:=words+1;
+        END_IF
+    END_WHILE
+    Write(char)
+    Write(vowels)
+    Write(words)
+END

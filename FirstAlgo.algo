@@ -2,24 +2,33 @@ ALGORITHM ALGO
 VAR
     vowels: INTEGER := 0;
     words: INTEGER:=0;
-    arr : ARRAY_OF STRING [100];
-    i : INTEGER:=0;
+    sent : CHAR;
+    
     Char : INTEGER:=0;
     
 
 BEGIN
-    Read (arr[i])
-    WHILE (arr[i]<> ".") DO
-        IF (arr[i]:=[a..z]or[A..Z]) THEN
-            Char:= Char+1;
-            IF (arr[i]:="a" or "e" or "i" or "o" or "u" or "A" or "E" or "I" or "O" or "U") THEN
-                vowels:=vowels+1;
-                Write(vowels)
-            END_IF
-        ELSE_IF (arr[i]:= " ") THEN
+    REPEAT
+    Read (sent)
+       IF (sent=' ' or sent='.') THEN
+       
+        contiune
+        char:=char+1;
+        
+       END_IF
+           
+       IF (sent='a' or sent='e' or sent='i' or sen:= 'o' or sent='u' ) THEN
+            vowels:=vowels+1;
+            char:=char+1;
+       END_IF
+        IF (sent= ' ') THEN
             words:=words+1;
+            char:= char+1;
         END_IF
-    END_WHILE
+   
+    UNTIL (sent='.')
+    words:=words+1;
+    char:=char+1;
     Write(char)
     Write(vowels)
     Write(words)
